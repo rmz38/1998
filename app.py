@@ -72,7 +72,7 @@ def getFaculty(faculty_id):
 
     return json.dumps ({'success': True, 'data': faculty.serializeall()}), 200
 
-@app.route('/api/class/<int:class_id>/add/', methods = ['POST'])
+@app.route('/api/class/<int:class_id>/add_faculty/', methods = ['POST'])
 def addFaculty(class_id):
     class_item = Class.query.filter_by(id = class_id).first()
     if class_item is None:
@@ -84,21 +84,28 @@ def addFaculty(class_id):
     db.session.commit()
     return json.dumps({'success': True, 'data': class_item.serializeid()}), 200
 
-# @app.route('/api/class/<int:_id>/assignment/', methods = ['POST'])
-# def createResearch(_id):
-#     post_body = json.loads(request.data)
-#     _class = Class.query.filter_by(id = _id).first()
-#     if _class is None:
-#         return json.dumps({'success': False, 'error': 'class not found'}), 404
-#     assignment = Assignment(
-#         class_id = _id,
-#         description = post_body.get('description'),
-#         due_date = post_body.get('due_date')
-#     )
-#     db.session.add(assignment)
-#     db.session.commit()
-#     return json.dumps({'success': True, 'data': assignment.serialize()}), 201
+@app.route('/api/class/<int:class_id_found>/research/', methods = ['POST'])
+def createResearch(class_id_found):
+    post_body = json.loads(request.data)
+    class_found = Class.query.filter_by(id = class_id_found).first()
+    if class_found is None:
+        return json.dumps({'success': False, 'error': 'class not found'}), 404
+    assignment = Research(
+        class_id = class_id_found,
+        description = post_body.get('description'),
+        subject = post_body.get('subject')
+    )
+    db.session.add(assignment)
+    db.session.commit()
+    return json.dumps({'success': True, 'data': assignment.serialize()}), 201
 
+@app.route('/api/research/<int:research_id>/', methods = ['GET'])
+def getResearch(research_id):
+    post_body = json.loads(request.data)
+    research_found = Research.query.filter_by(id = research_id).first()
+    if research_found is None:
+        return json.dumps({'success': False, 'error': 'research not found'}), 404
+    return json.dumps({'success': True, 'data': research_found.serialize()}), 201
 
 
 if __name__ == '__main__':
