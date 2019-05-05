@@ -99,7 +99,6 @@ def addFaculty(class_id):
 #     db.session.commit()
 #     return json.dumps({'success': True, 'data': assignment.serialize()}), 201
 
-#testing git
 
 
 if __name__ == '__main__':
