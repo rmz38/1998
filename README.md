@@ -1,15 +1,19 @@
 # 1998
-1998 final project
+# Cornel CS Wiki
+## 1998 final project
+
+##### Explore tech gig easier on campus
 
 ![Image description](1234.png)
-##### Important features
-
-Search and Display - get spercific classes, faculty and research on campus;
 
 ##### Description
 
 Cornell Wiki enables non CS and entry level CS studentto search for related resources
 that they are curious about Cornell.
+
+##### Important features
+
+Search and Display - get spercific classes, faculty and research on campus;
 
 It has a general search page, a filter page and a favorite page.
 
