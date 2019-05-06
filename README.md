@@ -34,11 +34,10 @@ Integration with an API - this API must provide some meaningful value to your ap
 
 API for searching the course.
 
-Backend
+# Backend
 
-The backend portion of the project must include:
-Designing an API, using database modeling, and implementing it using the Flask boilerplate code provided - it’s totally fine to write a wrapper for an existing API. Consider what changes you will need to fit the iOS client’s needs and how to model the data appropriately in a database.
-Deployment to Google Cloud - make sure you start on deployment early! It’s extremely easy to get wrong and can be tricky to debug.
+The Backend fulfills our iOS client's needs by servicing GET requests for information, which can provide all classes, all research belonging to a class, and all faculty teaching a class. It can also return specific research by id and specific faculty by id, allowing all faculty and research to be displayed in the app.
 
 
-we also need this part in the Readme file for project description
+
+
