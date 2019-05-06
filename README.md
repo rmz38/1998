@@ -1,7 +1,7 @@
 # 1998
 1998 final project
 
-Some screenshots of your app 
+![Image description](1234.png)
 ##### Important features
 
 Search and Display - get spercific classes, faculty and research on campus;
