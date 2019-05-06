@@ -34,7 +34,7 @@ Integration with an API - this API must provide some meaningful value to your ap
 
 API for searching the course.
 
-# Backend
+##### Backend
 
 The Backend fulfills our iOS client's needs by servicing GET requests for information, which can provide all classes, all research belonging to a class, and all faculty teaching a class. It can also return specific research by id and specific faculty by id, allowing all faculty and research to be displayed in the app.
 
