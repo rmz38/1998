@@ -17,6 +17,7 @@ with app.app_context():
 @app.route('/')
 def getHello():
     return "HELLOWORLD"
+    
 @app.route('/api/classes/')
 def getClasses():
     classes = Class.query.all()
