@@ -38,6 +38,8 @@ API for searching the course.
 
 The Backend fulfills our iOS client's needs by servicing GET requests for information, which can provide all classes, all research belonging to a class, and all faculty teaching a class. It can also return specific research by id and specific faculty by id, allowing all faculty and research to be displayed in the app.
 
+The backend is delpoyed through Docker Compose, and can be accessed through to the front end.The original plan is using the backend from Cornell Class Roster API, due to the limit of the time, the data API did not get connected, but could be delpoyed in the future. 
+
 
 
 
