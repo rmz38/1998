@@ -1,5 +1,5 @@
 # 1998
-# Cornel CS Wiki
+# Cornell CS Wiki
 ## 1998 final project
 
 ##### Explore tech gig easier on campus
